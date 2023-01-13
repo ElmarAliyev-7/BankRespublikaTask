@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6af27c36-165a-4ca3-b756-bfbc4262e607" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/BankRespublikaTask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BankRespublikaTask.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crud.php" beforeDir="false" afterPath="$PROJECT_DIR$/crud.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/blogs/1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/view/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/form.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +28,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -41,7 +39,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673636862735</updated>
-      <workItem from="1673636864023" duration="1143000" />
+      <workItem from="1673636864023" duration="3667000" />
     </task>
     <servers />
   </component>

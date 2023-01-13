@@ -17,15 +17,14 @@ if(!function_exists('uploadImage')){
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
         // Check if image file is a actual image or fake image
-        if(isset($_POST["submit"])) {
-            $check = getimagesize($imageTmpName);
-            if($check !== false) {
-                $uploadOk = 1;
-            } else {
-                $uploadOk = 0;
-                return alert("warning","File is not an image.");
-            }
+        $check = getimagesize($imageTmpName);
+        if($check !== false) {
+            $uploadOk = 1;
+        } else {
+            $uploadOk = 0;
+            return alert("warning","File is not an image.");
         }
+
 
         // Check if file already exists
         if (file_exists($target_file)) {
@@ -52,7 +51,7 @@ if(!function_exists('uploadImage')){
         // if everything is ok, try to upload file
         } else {
             if (move_uploaded_file($imageTmpName, $target_file)) {
-//                return alert("success","Process Finished Successfully.");
+                return alert("success","Image Uploaded Successfully.");
             } else {
                 return alert("danger","Sorry, there was an error uploading your file.");
             }

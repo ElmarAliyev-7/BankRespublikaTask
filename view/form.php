@@ -1,23 +1,30 @@
 <?php
-    if(isset($_POST['submit'])){
-        if(isset($_POST['desc']) && $_FILES['image']['size'] !== 0){
-            try {
-                $message = create('blogs', ['image', 'description'], [$_FILES['image']['name'], $_POST['desc']]);
-                uploadImage('images/blogs/', $_FILES['image']['name'],$_FILES['image']['tmp_name'], $_FILES["image"]["size"]);
-            } catch(PDOException $e) {
-                $message= $e->getMessage();
-            }
-        }else{
-            $message = alert('warning','Image and Description is required !');
-        }
-    }
+try {
+    $messages = [];
+    if( isset($_POST['submit'])):
+        if(empty($_POST['desc'])):
+            array_push($messages, alert('warning', 'Description required!'));
+        elseif(empty($_FILES['image']['name'])):
+            array_push($messages, alert('warning', 'Image required!'));
+        else:
+            $create_blog = create('blogs',['image', 'description'],[$_FILES['image']['name'], $_POST['desc']]);
+            array_push($messages, $create_blog);
+
+            $upload_image = uploadImage('images/blogs/',$_FILES['image']['name'],
+                $_FILES['image']['tmp_name'],$_FILES["image"]["size"]);
+            array_push($messages, $upload_image);
+        endif;
+    endif;
+} catch(PDOException $e) {
+    $message= $e->getMessage();
+}
 ?>
 
 <form method="post" action="" class="container mt-5" enctype="multipart/form-data">
     <div class="form-group pt-2">
-        <?php if(isset($message)): ?>
+        <?php foreach ($messages as $message):?>
             <?=$message;?>
-        <?php endif;?>
+        <?php endforeach;?>
     </div>
     <div class="form-group pt-2">
         <label for="image">Şəkili daxil edin</label>

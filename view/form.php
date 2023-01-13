@@ -8,13 +8,16 @@ try {
         elseif(empty($_FILES['image']['name'])):
             array_push($messages, alert('warning', 'Image required!'));
         else:
-            $create_blog = create('blogs',['image', 'description'],
-                ['images/blogs/'.$_FILES['image']['name'], $_POST['desc']]);
-            array_push($messages, $create_blog);
-
             $upload_image = uploadImage('images/blogs/',$_FILES['image']['name'],
                 $_FILES['image']['tmp_name'],$_FILES["image"]["size"]);
-            array_push($messages, $upload_image);
+
+            if($upload_image['uploadOk'] == 1):
+                $create_blog = create('blogs',['image', 'description'],
+                    ['images/blogs/'.$_FILES['image']['name'], $_POST['desc']]);
+                array_push($messages, $create_blog);
+            else:
+                array_push($messages, $upload_image['message']);
+            endif;
         endif;
     endif;
 } catch(PDOException $e) {
@@ -59,12 +62,13 @@ try {
                 </thead>
                 <tbody>
                 <?php foreach ($blogs as $key => $blog): ?>
+                    <?php $key++;?>
                     <tr>
                         <th><?=$key;?></th>
                         <td>#<?=$blog['id'];?></td>
                         <td><img src="<?=$blog['image'];?>" width="120px" height="100px"/></td>
                         <td><?=$blog['description'];?></td>
-                        <td>sil</td>
+                        <td>Edit | Delete</td>
                     </tr>
                 <?php endforeach; ?>
                 </tbody>

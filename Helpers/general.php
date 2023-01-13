@@ -22,38 +22,40 @@ if(!function_exists('uploadImage')){
             $uploadOk = 1;
         } else {
             $uploadOk = 0;
-            return alert("warning","File is not an image.");
+            return ['uploadOk' => $uploadOk, 'message' => alert("warning","File is not an image.")];
         }
 
 
         // Check if file already exists
         if (file_exists($target_file)) {
             $uploadOk = 0;
-            return alert("warning","Sorry, file already exists.");
+            return ['uploadOk' => $uploadOk, 'message' => alert("warning","Sorry, file already exists.")];
         }
 
         // Check file size
         if ($imageSize > 500000) {
             $uploadOk = 0;
-            return alert("warning","Sorry, your file is too large.");
+            return ['uploadOk' => $uploadOk, 'message' => alert("warning","Sorry, your file is too large.")];
         }
 
         // Allow certain file formats
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
             && $imageFileType != "gif" ) {
             $uploadOk = 0;
-            return alert("warning","Sorry, only JPG, JPEG, PNG & GIF files are allowed.");
+            return ['uploadOk' => $uploadOk,
+                'message' => alert("warning","Sorry, only JPG, JPEG, PNG & GIF files are allowed.")];
         }
 
         // Check if $uploadOk is set to 0 by an error
         if ($uploadOk == 0) {
-            return alert("danger","Sorry, your file was not uploaded.");
+            return ['uploadOk' => $uploadOk, 'message' => alert("warning","Sorry, your file was not uploaded.")];
         // if everything is ok, try to upload file
         } else {
             if (move_uploaded_file($imageTmpName, $target_file)) {
-                return alert("success","Image Uploaded Successfully.");
+                return ['uploadOk' => $uploadOk, 'message' => alert("success","Image Uploaded Successfully.")];
             } else {
-                return alert("danger","Sorry, there was an error uploading your file.");
+                return ['uploadOk' => $uploadOk,
+                    'message' => alert("danger","Sorry, there was an error uploading your file.")];
             }
         }
     }

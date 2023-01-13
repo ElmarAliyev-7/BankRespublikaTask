@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0676bbeb-1323-4d50-b35b-2d4c6cf719db" name="Changes" comment="" />
+    <list default="true" id="6af27c36-165a-4ca3-b756-bfbc4262e607" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/BankRespublikaTask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BankRespublikaTask.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud.php" beforeDir="false" afterPath="$PROJECT_DIR$/crud.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/blogs/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/form.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpStormWorkshopConfiguration">
-    <option name="enabled" value="true" />
-    <option name="isEnabled" value="true" />
-  </component>
-  <component name="ProjectId" id="2KGib2OaU6z56EFZvTlj5vY0HaK" />
+  <component name="ProjectId" id="2KHgL5vK47VjZystuwvHnFfcDOs" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,14 +36,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0676bbeb-1323-4d50-b35b-2d4c6cf719db" name="Changes" comment="" />
-      <created>1673607390591</created>
+      <changelist id="6af27c36-165a-4ca3-b756-bfbc4262e607" name="Changes" comment="" />
+      <created>1673636862735</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1673607390591</updated>
-      <workItem from="1673607398542" duration="7160000" />
-      <workItem from="1673616211985" duration="35000" />
-      <workItem from="1673616250051" duration="1244000" />
+      <updated>1673636862735</updated>
+      <workItem from="1673636864023" duration="1143000" />
     </task>
     <servers />
   </component>

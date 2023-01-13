@@ -8,7 +8,7 @@
                 $message= $e->getMessage();
             }
         }else{
-            $message = warning('Image and Description is required !');
+            $message = alert('warning','Image and Description is required !');
         }
     }
 ?>

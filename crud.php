@@ -19,6 +19,6 @@ if(!function_exists('create')){
         $conn = new PDO("mysql:host=localhost;dbname=br_task", "root", "");
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $conn->exec($query);
-        return success("Created Successfully");
+        return alert("success","Created Successfully");
     }
 }

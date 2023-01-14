@@ -1,13 +1,13 @@
 <?php
 
 if(!function_exists('alert')){
-    function alert($type, $message){
+    function alert(string $type, string $message){
         return "<div class='alert alert-$type'>$message</div>";
     }
 }
 
 if(!function_exists('uploadImage')){
-    function uploadImage($target_dir, $imageName, $imageTmpName, $imageSize ){
+    function uploadImage(string $target_dir, string $imageName, string $imageTmpName, int $imageSize ){
         //If folder doesn't exists create it
         if (!file_exists($target_dir)) {
             mkdir($target_dir, 0777, true);

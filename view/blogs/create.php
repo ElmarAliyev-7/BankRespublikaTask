@@ -8,7 +8,7 @@ try {
             array_push($messages, alert('warning', 'Image required!'));
         else:
             $upload_image = uploadImage('images/blogs/',$_FILES['image']['name'],
-                $_FILES['image']['tmp_name'],$_FILES["image"]["size"]);
+                $_FILES['image']['tmp_name'],$_FILES['image']['size']);
 
             if($upload_image['uploadOk'] == 1):
                 $create_blog = create('blogs',['image', 'description'],

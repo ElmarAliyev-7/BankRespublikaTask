@@ -34,7 +34,7 @@
 <div class="container">
     <div class="row">
         <?php foreach ($blogs as $key => $blog): ?>
-            <div class="col-4">
+            <div class="col-4 py-3">
                 <?php echo card($blog['image'], '', '', $blog['description'], ''); ?>
             </div>
         <?php endforeach; ?>

@@ -60,3 +60,21 @@ if(!function_exists('uploadImage')){
         }
     }
 }
+
+if(!function_exists('card')){
+    function card(string $image_path, string $image_alt = null, string $title = null, string $desc = null, string $link = null){
+
+        $html  = '<div class="card" style="width: 18rem;">';
+        $html .= '<img class="card-img-top" src="'.$image_path.'" alt="'.$image_alt.'" height="240px;">';
+        $html .= '<div class="card-body">';
+        $html .= '<h5 class="card-title">'.$title.'</h5>';
+        $html .= '<p class="card-text">'.$desc.'</p>';
+        if(!empty($link)){
+            $html .= '<a href="'.$link.'" class="btn btn-primary">More</a>';
+        }
+        $html .= '</div>';
+        $html .= '</div>';
+
+        return $html;
+    }
+}
